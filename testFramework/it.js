@@ -2,9 +2,9 @@
 
   function it(string, callback) {
     if (callback()) {
-      return `${string}\n ${callback()}`;
+      console.log(`%c ${string}\n ${callback()}`, 'color: red');
     } else {
-      return `${string}`;
+      console.log(`%c ${string}`, 'color: green');
     }
   }
 
