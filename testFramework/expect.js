@@ -42,6 +42,12 @@
         if (document.getElementById(object) === null) {
           return `FAIL: HTML element ${object} does not exist`
         }
+      },
+
+      toContainHtmlContent: function(text) {
+        if (!document.getElementById(object).innerHTML.includes(text)) {
+          return `FAIL: HTML element ${object} does not include ${text}`
+        }
       }
     }
   }

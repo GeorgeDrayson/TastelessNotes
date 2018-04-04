@@ -1,4 +1,4 @@
-describe('all tests', function(){
+describe('Framework tests', function(){
   it('should pass toEqual', function(){
     return expect(1).toEqual(1);
   });
@@ -44,5 +44,8 @@ describe('HTML testers', function() {
 
   it('should have an HTML button called "another_button"', function() {
     return expect('another_button').toBeHtmlElement();
+  });
+  it('should have a paragraph called "paragraph" with the text "I am some test text"', function() {
+    return expect('paragraph').toContainHtmlContent("I am some test text");
   });
 });
