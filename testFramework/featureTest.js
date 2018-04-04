@@ -1,4 +1,3 @@
-
 fill in form
 document.getElementByID('foo').value = "bar"
 //document.forms[0].submit()
