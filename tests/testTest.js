@@ -38,8 +38,8 @@ describe('Framework tests', function(){
 });
 
 describe('HTML testers', function() {
-  it('should have an HTML button called "submit_button"', function() {
-    return expect('submit_button').toBeHtmlElement();
+  it('should have an HTML button called "show_header"', function() {
+    return expect('show_header').toBeHtmlElement();
   });
 
   it('should have an HTML button called "another_button"', function() {
@@ -47,5 +47,12 @@ describe('HTML testers', function() {
   });
   it('should have a paragraph called "paragraph" with the text "I am some test text"', function() {
     return expect('paragraph').toContainHtmlContent("I am some test text");
+  });
+});
+
+describe('Interactive testers', function() {
+  it('It should display header when button is pushed', function() {
+    helpers.clickObject('show_header');
+    expect('header').toContainHtmlContent("HEADER!!");
   });
 });

@@ -4,6 +4,7 @@
   <script src='../testFramework/describe.js'></script>
   <script src='../testFramework/it.js'></script>
   <script src='../testFramework/expect.js'></script>
+  <script src='../testFramework/helpers.js'></script>
 
 </head>
 
@@ -12,17 +13,14 @@
 
   <form "main_form">
     <input type="text" id="input_form">
-    <input type="submt">
+    <input type="submit">
   </form>
 
   <p id='paragraph'> I am some test text </p>
 
-  <button id="submit_button" onClick="showHeader()">CLICK ME!</button>
+  <button id="show_header" onclick="showHeader()">CLICK ME!</button>
 
 </body>
-
-<!-- tests -->
-<script src='../tests/testTest.js'></script>
 
 <script>
   function showHeader() {
@@ -34,5 +32,8 @@
   };
 
 </script>
+
+<!-- tests -->
+<script src='../tests/testTest.js'></script>
 
 </html>
