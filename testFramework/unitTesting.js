@@ -40,5 +40,5 @@
     }
   }
 
-  exports.expect = expect
+  exports.expect = expect;
 })(this)
