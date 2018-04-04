@@ -1,0 +1,36 @@
+<html>
+<head>
+  <!-- testers -->
+  <script src='../testFrameWork/describe.js'></script>
+  <script src='../testFrameWork/it.js'></script>
+  <script src='../testFrameWork/unitTesting.js'></script>
+
+</head>
+
+<body>
+  <h1 id='header' style="display:none;">HEADER!!</h1>
+
+  <form "main_form">
+    <input type="text" id="input_form">
+    <input type="submt">
+  </form>
+
+  <button id="submit_button" onClick="showHeader()">CLICK ME!</button>
+
+</body>
+
+<!-- tests -->
+<script src='../tests/testTest.js'></script>
+
+<script>
+  function showHeader() {
+    document.getElementById('header').style.display = "block";
+  };
+
+  function clickButton() {
+    document.getElementById('submit_button').click()
+  };
+
+</script>
+
+</html>

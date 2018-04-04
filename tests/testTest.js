@@ -36,3 +36,13 @@ describe('all tests', function(){
     return expect("Hello!").toNotContain("H");
   });
 });
+
+describe('HTML testers', function() {
+  it('should have an HTML button called "submit_button"', function() {
+    return expect('submit_button').toBeHtmlElement();
+  });
+
+  it('should have an HTML button called "another_button"', function() {
+    return expect('another_button').toBeHtmlElement();
+  });
+});
