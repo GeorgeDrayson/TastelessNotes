@@ -6,10 +6,6 @@ Note.prototype.getBody = function() {
   return this._body
 }
 
-Note.prototype.abbrBody = function(n) {
-  if (this._body.length > 20) {
-    return this._body.substring(0,20)+'...';
-  } else {
-    return this._body;
-  }
+Note.prototype.abbrBody = function (n) {
+  return (this._body.length > 20 ? this._body.slice(0, 20) + '...' : this._body);
 }
