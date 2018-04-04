@@ -55,4 +55,9 @@ describe('Interactive testers', function() {
     helpers.clickObject('show_header');
     expect('header').toContainHtmlContent("HEADER!!");
   });
+  it('Should display the data input into the form as a header', function(){
+    helpers.fillInForm('input_form', 'Hello World!');
+    helpers.clickObject('submitButton');
+    expect('formResults').toContainHtmlContent("Hello World!");
+  });
 });
