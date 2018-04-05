@@ -65,7 +65,8 @@ describe('Front End (Main Page)', function() {
     it('should replace the form with body of the note', function() {
       helpers.fillInForm('note_input', 'My Second Note');
       helpers.clickObject('create_note');
-      return expect('notes_list').toContainHtmlContent('My Second Note');
+      helpers.clickObject('note_1');
+      return expect('note_body_text').toContainHtmlContent('My Second Note');
     });
 
   });
