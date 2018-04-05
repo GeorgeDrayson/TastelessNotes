@@ -1,8 +1,10 @@
 var notebook = new Notebook();
 
 function addNote () {
+    console.log(notebook.all());
     var body = getFormInput();
     notebook.add(new Note(body));
+    clearTextBox();
     drawList();
 }
 
@@ -51,5 +53,8 @@ function showFormDiv() {
   bigNote.style.display = "none";
   formDiv.style.display = "block";
   listDiv.style.display = "block";
+};
 
+function clearTextBox() {
+  document.getElementById('note_input').value = '';
 };

@@ -14,10 +14,10 @@
   <h1 id="header">Tasteless Notes</h1>
 
   <div id="form_div">
-    <form id="note_form" onsubmit="addNote(); return false;">
+    <form id="note_form">
       <textarea id="note_input" rows="20" cols="80"></textarea>
       <br/>
-      <button id="create_note" style="display: visible;">Create</button>
+      <button id="create_note" style="display: block;" onclick="addNote(); return false;">Create</button>
     </form>
   </div>
 
@@ -28,6 +28,7 @@
   </div>
 
 <div id="big_note" style="display: none;">
+  <p id="note_body_text"></p>
   <button id="back_button" onclick="showFormDiv()">Back</button>
 </div>
 
