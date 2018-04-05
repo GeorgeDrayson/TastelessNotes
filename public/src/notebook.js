@@ -9,3 +9,4 @@ Notebook.prototype.add = function(note) {
 Notebook.prototype.all = function() {
   return this._notes
 }
+
