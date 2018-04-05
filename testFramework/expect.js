@@ -39,7 +39,7 @@
       },
 
       toBeHtmlElement: function() {
-        if (document.getElementById(object) === null) {
+        if (document.getElementById(object) == null) {
           return `FAIL: HTML element ${object} does not exist`
         }
       },

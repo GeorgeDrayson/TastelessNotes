@@ -1,0 +1,34 @@
+<html>
+<head>
+  <script src='../../testFramework/describe.js'></script>
+  <script src='../../testFramework/it.js'></script>
+  <script src='../../testFramework/expect.js'></script>
+  <script src='../../testFramework/helpers.js'></script>
+
+  <script src='../src/note.js'></script>
+  <script src='../src/notebook.js'></script>
+</head>
+
+<body>
+  <div id="top_div">
+    <h1 id="header">Tasteless Notes</h1>
+
+    <form id="note_form" onsubmit="return false;">
+      <textarea id="note_input" rows="20" cols="80"></textarea>
+      <br/>
+      <button id="create_note">Create</button>
+    </form>
+  </div>
+
+  <div id="list_div">
+    <ul id="notes_list">
+      <li></li>
+    </ul>
+  </div>
+
+</body>
+
+<!-- tests -->
+<script src='../../tests/realTest.js'></script>
+
+</html>
