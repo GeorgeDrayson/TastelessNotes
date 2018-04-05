@@ -7,17 +7,17 @@
 
   <script src='../src/note.js'></script>
   <script src='../src/notebook.js'></script>
-  <script src='../src/app_initialize.js'></script>
+  <script src='../src/interface.js'></script>
 </head>
 
-<body>
-  <div id="top_div">
-    <h1 id="header">Tasteless Notes</h1>
+<body onload="drawList(); return false;">
+  <h1 id="header">Tasteless Notes</h1>
 
+  <div id="form_div">
     <form id="note_form" onsubmit="addNote(); return false;">
       <textarea id="note_input" rows="20" cols="80"></textarea>
       <br/>
-      <button id="create_note">Create</button>
+      <button id="create_note" style="display: visible;">Create</button>
     </form>
   </div>
 
@@ -27,11 +27,13 @@
     </ul>
   </div>
 
+<div id="big_note" style="display: none;">
+  <button id="back_button" onclick="showFormDiv()">Back</button>
+</div>
+
 </body>
 
 <!-- tests -->
 <script src='../../tests/realTest.js'></script>
-<script src='../../tests/noteTest.js'></script>
-<script src='../../tests/notebookTest.js'></script>
 
 </html>

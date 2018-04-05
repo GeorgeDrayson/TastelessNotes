@@ -41,7 +41,6 @@ describe('HTML testers', function() {
   it('should have an HTML button called "show_header"', function() {
     return expect('show_header').toBeHtmlElement();
   });
-
   it('should have an HTML button called "another_button"', function() {
     return expect('another_button').toBeHtmlElement();
   });
@@ -60,4 +59,5 @@ describe('Interactive testers', function() {
     helpers.clickObject('submitButton');
     expect('formResults').toContainHtmlContent("Hello World!");
   });
+  
 });

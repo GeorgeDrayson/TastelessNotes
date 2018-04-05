@@ -48,7 +48,20 @@
         if (!document.getElementById(object).innerHTML.includes(text)) {
           return `FAIL: HTML element ${object} does not include ${text}`
         }
+      },
+
+      toBeVisible: function(text) {
+        if (document.getElementById(object).style.display === "none") {
+          return `FAIL: HTML element ${object} is not visible`
+        }
+      },
+
+      toNotBeVisible: function(text) {
+        if (document.getElementById(object).style.display !== "none") {
+          return `FAIL: HTML element ${object} is visible`
+        }
       }
+
     }
   }
 
