@@ -10,39 +10,4 @@ describe('Notebook', function() {
 
   });
 
-  describe('.addToList', function() {
-
-    it('Creates an HTML element', function() {
-      function FakeNote() {
-
-      }
-
-      FakeNote.prototype.abbrBody = function() {
-        return 'wowzers'
-      }
-      notebook = new Notebook();
-      notebook.add(new FakeNote());
-      notebook.addToList();
-      return expect('notes_list').toContainHtmlContent('wowzers');
-    });
-
-  });
-
-  describe('.addNote', function() {
-
-    it('Creates an HTML element', function() {
-      function FakeNote() {
-
-      }
-
-      FakeNote.prototype.abbrBody = function() {
-        return 'wowowow'
-      }
-      notebook = new Notebook();
-      notebook.addNote(new FakeNote());
-      return expect('notes_list').toContainHtmlContent('wowowow');
-    });
-
-  });
-
 });

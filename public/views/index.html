@@ -7,13 +7,14 @@
 
   <script src='../src/note.js'></script>
   <script src='../src/notebook.js'></script>
+  <script src='../src/app_initialize.js'></script>
 </head>
 
 <body>
   <div id="top_div">
     <h1 id="header">Tasteless Notes</h1>
 
-    <form id="note_form" onsubmit="return false;">
+    <form id="note_form" onsubmit="addNote(); return false;">
       <textarea id="note_input" rows="20" cols="80"></textarea>
       <br/>
       <button id="create_note">Create</button>
