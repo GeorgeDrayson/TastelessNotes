@@ -10,10 +10,10 @@ A note taking SPA (single-page app) developed by **The Tasteless Sheep**: Viv (@
 - Build our own testing framework to be able to utilize feature and unit tests needed, allowing us to employ TDD to drive the development of our application
 
 ## Note App Overall Planning
-![Note App Overall Planning](https://github.com/VivianAllen/TastelessNotes/images/overall_domain_model.png)
+![Note App Overall Planning](/images/overall_domain_model.png)
 
 ## Tasteless Notes Domain Model
-![Tasteless Notes Domain Model](https://github.com/VivianAllen/TastelessNotes/images/tasteless_notes_domain_model.png)
+![Tasteless Notes Domain Model](/images/tasteless_notes_domain_model.png)
 
 ## Test Framework Domain Model
-![Test Framework Domain Model](https://github.com/VivianAllen/TastelessNotes/images/test_framework_domain_model.png)
+![Test Framework Domain Model](/images/test_framework_domain_model.png)
