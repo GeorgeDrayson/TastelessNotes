@@ -1,4 +1,4 @@
-describe('Front End (Main Page)', function() {
+setTimeout(function(){describe('Front End (Main Page)', function() {
   describe('Page elements', function() {
     it('Has a title called "Tasteless Notes"', function() {
       return expect('header').toContainHtmlContent('Tasteless Notes')
@@ -71,4 +71,4 @@ describe('Front End (Main Page)', function() {
 
   });
 
-});
+})}, 2000);
