@@ -75,7 +75,7 @@ describe('Front End (Main Page)', function() {
     it('should be able to delete an existing note', function() {
       helpers.fillInForm('note_input', 'My Note To Delete');
       helpers.clickObject('create_note');
-      helpers.clickObject('delete_note_2');
+      helpers.clickObject('del_2');
       return expect('note_2').toNotBeHtmlElement('note_2');
     });
   });

@@ -3,9 +3,11 @@ var notebook = new Notebook();
 function addNote () {
     console.log(notebook.all());
     var body = getFormInput();
-    notebook.add(new Note(body));
-    clearTextBox();
-    drawList();
+    if (body !== "") {
+      notebook.add(new Note(body));
+      clearTextBox();
+      drawList();
+    }
 }
 
 function getFormInput () {
@@ -50,6 +52,7 @@ function drawList() {
     table.appendChild(rowTr);
 
     document.getElementById(noteTd.id).onclick = function() {showBigNote(this.id)};
+    document.getElementById(delBtn.id).onclick = function() {deleteNote(this.id)};
   }
 }
 
@@ -89,4 +92,10 @@ function setBigNoteText(noteId) {
   var i = parseInt(noteId.split("_")[1]);
   var text = notebook.all()[i].getBody();
   document.getElementById("note_body_text").innerHTML = text;
+}
+
+function deleteNote(clicked_id) {
+  var i = parseInt(clicked_id.split("_")[1]);
+  notebook.delete(i);
+  drawList();
 }

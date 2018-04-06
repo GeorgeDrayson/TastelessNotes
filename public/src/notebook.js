@@ -10,3 +10,6 @@ Notebook.prototype.all = function() {
   return this._notes
 }
 
+Notebook.prototype.delete = function (index) {
+  this._notes.splice(index, 1);
+}

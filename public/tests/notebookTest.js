@@ -8,6 +8,11 @@ describe('Notebook', function() {
       expect(testNotebook.all()).toContain('wowzers')
     });
 
+    it('Deletes a note', function() {
+      testNotebook.delete(testNotebook._notes, 'wowzers');
+      expect(testNotebook.all()).toNotContain('wowzers')
+    });
+
   });
 
 });
