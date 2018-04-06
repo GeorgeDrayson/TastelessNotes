@@ -14,7 +14,7 @@ function(){describe('Front End (Main Page)', function() {
     });
 
     it('Has a notes list element', function() {
-      return expect('notes_list').toBeHtmlElement();
+      return expect('notes_table').toBeHtmlElement();
     });
 
   });
@@ -81,3 +81,4 @@ function(){describe('Front End (Main Page)', function() {
   });
 
 });
+};
