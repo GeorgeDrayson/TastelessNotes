@@ -78,6 +78,14 @@ function(){describe('Front End (Main Page)', function() {
       helpers.clickObject('del_2');
       return expect('note_2').toNotBeHtmlElement('note_2');
     });
+    it('should be able to edit an existing note', function(){
+      helpers.fillInForm('note_input', 'My Note To Delete');
+      helpers.clickObject('create_note');
+      helpers.clickObject('edit_2');
+      helpers.fillInForm('note_edit', 'New Note Text');
+      helpers.clickObject('submit_edit');
+      return expect('note_2').toContainHTMLContent('New Note Text');
+    });
   });
 
 });

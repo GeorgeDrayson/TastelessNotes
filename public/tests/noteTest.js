@@ -18,4 +18,15 @@ describe('Note', function() {
 
   });
 
+  describe('.editBody', function() {
+
+    it('replaces the body text', function() {
+      note = new Note('Shopping: milk, tea, ketchup, burger patty, burger bun')
+      var newText = 'new text';
+      note.editBody(newText)
+      return expect(note.getBody()).toEqual(newtext)
+    });
+
+  });
+
 });
