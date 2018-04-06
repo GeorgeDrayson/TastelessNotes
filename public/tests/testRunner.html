@@ -1,18 +1,18 @@
+<head>
 <!-- testers -->
 <script src='../testFramework/describe.js'></script>
 <script src='../testFramework/it.js'></script>
 <script src='../testFramework/expect.js'></script>
 <script src='../testFramework/helpers.js'></script>
-
+<!-- logic -->
 <script src='../src/note.js'></script>
 <script src='../src/notebook.js'></script>
-
-<!-- html page to test -->
-<body>
-  <iframe id='pageUnderTest' allowfullscreen='true' src="../views/index.html"></iframe>
-</body>
-
 <!-- tests -->
 <script src='noteTest.js'></script>
 <script src='notebookTest.js'></script>
-<script src='realTest.js'></script>
+</head>
+<body>
+  <!-- html page to test -->
+  <iframe id='pageUnderTest' allowfullscreen='true' src="../views/index.html"></iframe>
+  <script src='realTest.js'></script>
+</body>
