@@ -1,16 +1,16 @@
 var notebook = new Notebook();
 
 function addNote () {
-    var body = getFormInput();
+    var body = getFormInput("note_input");
     if (body !== "") {
       notebook.add(new Note(body));
-      clearTextBox();
+      clearTextBox('note_input');
       drawList();
     }
 }
 
-function getFormInput () {
-    return document.getElementById("note_input").value;
+function getFormInput (id) {
+    return document.getElementById(id).value;
 }
 
 function createTableElement(el_name, i, el_tag, el_text = null) {
@@ -52,6 +52,7 @@ function drawList() {
 
     document.getElementById(noteTd.id).onclick = function() {showBigNote(this.id)};
     document.getElementById(delBtn.id).onclick = function() {deleteNote(this.id)};
+    document.getElementById(editBtn.id).onclick = function() {editNote(this.id)};
   }
 }
 
@@ -81,8 +82,8 @@ function showFormDiv() {
   listDiv.style.display = "block";
 };
 
-function clearTextBox() {
-  document.getElementById('note_input').value = '';
+function clearTextBox(id) {
+  document.getElementById(id).value = '';
 };
 
 function setBigNoteText(noteId) {
@@ -95,4 +96,25 @@ function deleteNote(clicked_id) {
   var i = parseInt(clicked_id.split("_")[1]);
   notebook.delete(i);
   drawList();
+}
+
+function editNote(clicked_id) {
+  var i = clicked_id.split("_")[1];
+  document.getElementById('form_div').style.display = "none";
+  document.getElementById('list_div').style.display = "none";
+  document.getElementById('note_edit_div').style.display = "block";
+  document.getElementById('submit_note_edit').value = i;
+}
+
+function submitNoteEdit() {
+  var i = parseInt(document.getElementById('submit_note_edit').value);
+  var body = getFormInput("note_edit_text");
+  if (body !== "") {
+    notebook.all()[i].editBody(body);
+    clearTextBox("note_edit_text");
+    drawList();
+  }
+  document.getElementById('form_div').style.display = "block";
+  document.getElementById('list_div').style.display = "block";
+  document.getElementById('note_edit_div').style.display = "none";
 }

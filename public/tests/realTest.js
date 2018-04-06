@@ -73,6 +73,7 @@ function(){describe('Front End (Main Page)', function() {
 
   describe('Note edit and delete', function() {
     it('should be able to delete an existing note', function() {
+      helpers.clickObject('back_button');
       helpers.fillInForm('note_input', 'My Note To Delete');
       helpers.clickObject('create_note');
       helpers.clickObject('del_2');
@@ -82,9 +83,9 @@ function(){describe('Front End (Main Page)', function() {
       helpers.fillInForm('note_input', 'My Note To Delete');
       helpers.clickObject('create_note');
       helpers.clickObject('edit_2');
-      helpers.fillInForm('note_edit', 'New Note Text');
-      helpers.clickObject('submit_edit');
-      return expect('note_2').toContainHTMLContent('New Note Text');
+      helpers.fillInForm('note_edit_text', 'New Note Text');
+      helpers.clickObject('submit_note_edit');
+      return expect('note_2').toContainHtmlContent('New Note Text');
     });
   });
 
