@@ -9,3 +9,7 @@ Note.prototype.getBody = function() {
 Note.prototype.abbrBody = function() {
   return (this._body.length > 20 ? this._body.slice(0, 20) + '...' : this._body);
 }
+
+Note.prototype.editBody = function(text){
+  this._body = text;
+}

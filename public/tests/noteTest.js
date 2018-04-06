@@ -24,7 +24,7 @@ describe('Note', function() {
       note = new Note('Shopping: milk, tea, ketchup, burger patty, burger bun')
       var newText = 'new text';
       note.editBody(newText)
-      return expect(note.getBody()).toEqual(newtext)
+      return expect(note.getBody()).toEqual(newText)
     });
 
   });
