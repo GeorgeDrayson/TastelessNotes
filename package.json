@@ -1,0 +1,25 @@
+{
+  "name": "tastelessnotes",
+  "version": "1.0.0",
+  "description": "A note taking SPA (single-page app) developed by **The Tasteless Sheep**: Viv (@VivianAllen), Julian (@julesnuggy), George (@GeorgeDrayson) and Chris (@defc0nONE).",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VivianAllen/TastelessNotes.git"
+  },
+  "author": "The Tasteless Sheep",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VivianAllen/TastelessNotes/issues"
+  },
+  "homepage": "https://github.com/VivianAllen/TastelessNotes#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
