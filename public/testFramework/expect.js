@@ -39,31 +39,36 @@
       },
 
       toBeHtmlElement: function() {
-        if (document.getElementById(object) === null) {
+        var frameDoc = document.getElementById("pageUnderTest").contentDocument;
+        if (frameDoc.getElementById(object) == null) {
           return `FAIL: HTML element ${object} does not exist`
         }
       },
 
       toNotBeHtmlElement: function() {
-        if (document.getElementById(object) !== null) {
+        var frameDoc = document.getElementById("pageUnderTest").contentDocument;
+        if (frameDoc.getElementById(object) !== null) {
           return `FAIL: HTML element ${object} exists (but it shouldn't)`
         }
       },
 
       toContainHtmlContent: function(text) {
-        if (!document.getElementById(object).innerHTML.includes(text)) {
+        var frameDoc = document.getElementById("pageUnderTest").contentDocument;
+        if (!frameDoc.getElementById(object).innerHTML.includes(text)) {
           return `FAIL: HTML element ${object} does not include ${text}`
         }
       },
 
       toBeVisible: function(text) {
-        if (document.getElementById(object).style.display === "none") {
+        var frameDoc = document.getElementById("pageUnderTest").contentDocument;
+        if (frameDoc.getElementById(object).style.display === "none") {
           return `FAIL: HTML element ${object} is not visible`
         }
       },
 
       toNotBeVisible: function(text) {
-        if (document.getElementById(object).style.display !== "none") {
+        var frameDoc = document.getElementById("pageUnderTest").contentDocument;
+        if (frameDoc.getElementById(object).style.display !== "none") {
           return `FAIL: HTML element ${object} is visible`
         }
       }
