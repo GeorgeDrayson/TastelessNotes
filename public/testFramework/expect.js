@@ -45,6 +45,13 @@
         }
       },
 
+      toNotBeHtmlElement: function() {
+        var frameDoc = document.getElementById("pageUnderTest").contentDocument;
+        if (frameDoc.getElementById(object) !== null) {
+          return `FAIL: HTML element ${object} exists (but it shouldn't)`
+        }
+      },
+
       toContainHtmlContent: function(text) {
         var frameDoc = document.getElementById("pageUnderTest").contentDocument;
         if (!frameDoc.getElementById(object).innerHTML.includes(text)) {

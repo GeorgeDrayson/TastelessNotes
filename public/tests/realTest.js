@@ -23,7 +23,7 @@ function(){describe('Front End (Main Page)', function() {
     it('should be able to fill in and create a new form', function() {
       helpers.fillInForm('note_input', 'My First Note');
       helpers.clickObject('create_note');
-      return expect('notes_list').toContainHtmlContent('My First Note');
+      return expect('notes_table').toContainHtmlContent('My First Note');
     });
 
     it('should not show "big_note" initially', function() {
@@ -70,5 +70,14 @@ function(){describe('Front End (Main Page)', function() {
       return expect('note_body_text').toContainHtmlContent('My Second Note');
     });
   });
- })
-};
+
+  describe('Note edit and delete', function() {
+    it('should be able to delete an existing note', function() {
+      helpers.fillInForm('note_input', 'My Note To Delete');
+      helpers.clickObject('create_note');
+      helpers.clickObject('del_2');
+      return expect('note_2').toNotBeHtmlElement('note_2');
+    });
+  });
+
+});

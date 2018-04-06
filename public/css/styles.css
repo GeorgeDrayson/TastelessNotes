@@ -1,0 +1,38 @@
+body {
+  max-width: 700px;
+  background-color: #ffce45;
+}
+
+h1#header {
+  font-family: 'Cabin Sketch', cursive !important;
+  font-size: 50px;
+  text-align: center;
+  color: #ff006c;
+}
+
+textarea, td, p {
+  font-family: 'Special Elite', cursive !important;
+  font-size: 20px;
+  color: #673ab7;
+}
+
+p {
+  font-size: 15px;
+}
+
+td {
+  padding: 5px;
+}
+
+button {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 20px;
+  padding: 5px;
+  margin: 2px;
+}
+
+
+.lob{font-family: 'Lobster Two', cursive;}
+.gui{font-family: 'Gugi', cursive;}
+.com{font-family: 'Comfortaa', cursive;}
+.pla{font-family: 'Playball', cursive;}
