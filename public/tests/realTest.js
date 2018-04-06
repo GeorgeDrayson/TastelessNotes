@@ -1,4 +1,5 @@
-describe('Front End (Main Page)', function() {
+document.getElementById("pageUnderTest").onload =
+function(){describe('Front End (Main Page)', function() {
   describe('Page elements', function() {
     it('Has a title called "Tasteless Notes"', function() {
       return expect('header').toContainHtmlContent('Tasteless Notes')
@@ -68,7 +69,6 @@ describe('Front End (Main Page)', function() {
       helpers.clickObject('note_1');
       return expect('note_body_text').toContainHtmlContent('My Second Note');
     });
-
   });
-
-});
+ })
+};

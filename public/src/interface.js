@@ -1,7 +1,6 @@
 var notebook = new Notebook();
 
 function addNote () {
-    console.log(notebook.all());
     var body = getFormInput();
     notebook.add(new Note(body));
     clearTextBox();
@@ -36,7 +35,6 @@ function emptyList() {
 };
 
 function showBigNote(noteId) {
-  console.log(noteId)
   var bigNote = document.getElementById('big_note')
   var formDiv = document.getElementById('form_div')
   var listDiv = document.getElementById('list_div')
@@ -47,7 +45,6 @@ function showBigNote(noteId) {
 };
 
 function showFormDiv() {
-  console.log("showformdiv")
   var bigNote = document.getElementById('big_note')
   var formDiv = document.getElementById('form_div')
   var listDiv = document.getElementById('list_div')
