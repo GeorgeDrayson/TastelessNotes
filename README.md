@@ -28,12 +28,13 @@ So I can see all the information in the note
 
 ## How To Use
 
-```
-npm install http-server -g
-```
-```
-http-server
-```
+1. Clone this repo
+
+2. In Terminal, run:
+ * `npm install` to install the node packages
+ * `http-server` to boot the local server
+
+3. Visit the localhost address (e.g. http://localhost:8080)
 
 ## How It Works
 
