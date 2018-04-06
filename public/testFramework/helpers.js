@@ -2,10 +2,12 @@
 
   const helpers = {
       fillInForm: function(id, content) {
-        document.getElementById(id).value = content;
+        var frameDoc = document.getElementById("pageUnderTest").contentDocument;
+        frameDoc.getElementById(id).value = content;
       },
       clickObject: function(id) {
-        document.getElementById(id).click();
+        var frameDoc = document.getElementById("pageUnderTest").contentDocument;
+        frameDoc.getElementById(id).click();
       }
   };
 
