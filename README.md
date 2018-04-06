@@ -28,6 +28,13 @@ So I can see all the information in the note
 
 ## How To Use
 
+```
+npm install http-server -g
+```
+```
+http-server
+```
+
 ## How It Works
 
 ## Note App Overall Planning
